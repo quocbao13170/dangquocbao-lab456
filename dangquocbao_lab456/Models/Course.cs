@@ -9,7 +9,6 @@ namespace dangquocbao_lab456.Models
     public class Course
     {
         public int Id { get; set; }
-
         public ApplicationUser Lecturer { get; set; }
         [Required]
         public string LectureId { get; set; }
