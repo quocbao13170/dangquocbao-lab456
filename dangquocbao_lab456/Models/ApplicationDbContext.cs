@@ -31,11 +31,11 @@ namespace dangquocbao_lab456.Models
             modelBuilder.Entity<ApplicationUser>()
                 .HasMany(u => u.Followers)
                 .WithRequired(f => f.Followee)
-                .WithCascadeOnDelete(false);
+                .WillCascadeOnDelete(false);
             modelBuilder.Entity<ApplicationUser>()
                 .HasMany(u => u.Followees)
                 .WithRequired(f => f.Follower)
-                .WithCascadeOnDelete(false);
+                .WillCascadeOnDelete(false);
             base.OnModelCreating(modelBuilder);
         }
     }
